@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Form</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container text-center">
+        <h2>School Registration Form</h2>
+        <form th:action="@{/submittedForm}" method="post" style="max-width: 600px; margin: 0 auto;" th:object="${student}">
+            <div class="m-3">
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">Name</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{newStudent}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">E-mail</label>
+                    <div class="col-8">
+                        <input type="email" class="form-control" th:field="*{email}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">Password</label>
+                    <div class="col-8">
+                        <input type="password" class="form-control" th:field="*{password}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">Birthday</label>
+                    <div class="col-8">
+                        <input type="date" class="form-control" th:field="*{birthday}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">College</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{college}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">Major</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{major}" required>
+                    </div>
+                </div>
+                <div class="form-group row mt-4">
+                    <label class="col-form-label col-4">Color</label>
+                    <div class="col-8">
+                        <input type="text" class="form-control" th:field="*{color}" required>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <input type="reset" value="Reset" class="btn btn-secondary">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
+
+<!--Email: <input type="email" name="email" required><br>-->
+<!--Password: <input type="password" name="password" required><br>-->
+<!--Birthday: <input type="date" name="birthday" required><br>-->
+<!--New Student: <input type="text" name="newStudent"><br>-->
+<!--College: <input type="text" name="college"><br>-->
+<!--Major: <input type="text" name="major"><br>-->
+<!--Favorite Color: <input type="text" name="color"><br>-->
+<!--Accept Terms: <input type="checkbox" name="terms" value="Accepted" required><br>-->
+<!--<button type="submit">Submit</button>-->
